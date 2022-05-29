@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BestCostRouteFinder.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace BestCostRouteFinder.Infrastructure.Context
@@ -16,5 +17,9 @@ namespace BestCostRouteFinder.Infrastructure.Context
         {
             options.UseSqlServer(_configuration.GetConnectionString("SqlServer"));
         }
+
+        public DbSet<Place> Place;
+
+        public DbSet<Route> Route;
     }
 }
