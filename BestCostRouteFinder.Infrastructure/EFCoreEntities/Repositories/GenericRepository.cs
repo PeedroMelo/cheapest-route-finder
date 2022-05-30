@@ -36,5 +36,8 @@ namespace BestCostRouteFinder.Infrastructure.Repositories
 
         public void RemoveRange(IEnumerable<T> entities)
             => _context.Set<T>().RemoveRange(entities);
+
+        public void SaveChanges()
+            => _context.SaveChanges();
     }
 }

@@ -50,5 +50,10 @@ namespace BestCostRouteFinder.Domain.Interfaces
         /// </summary>
         /// <param name="entities">The list of entities to be removed</param>
         void RemoveRange(IEnumerable<T> entities);
+
+        /// <summary>
+        /// Commit the changes
+        /// </summary>
+        void SaveChanges();
     }
 }

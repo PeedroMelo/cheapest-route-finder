@@ -8,7 +8,6 @@ namespace BestCostRouteFinder.Infrastructure.Repositories
     {
         public RouteRepository(ApplicationDbContext context) : base(context)
         {
-
         }
 
         public Route CreateRoute(string origin, string destiny, decimal cost)
@@ -23,7 +22,7 @@ namespace BestCostRouteFinder.Infrastructure.Repositories
                 };
 
                 Route createdRoute = Add(route);
-                _context.SaveChanges();
+                SaveChanges();
 
                 return createdRoute;
             }
@@ -32,16 +31,6 @@ namespace BestCostRouteFinder.Infrastructure.Repositories
                 
                 throw;
             }
-        }
-
-        public void DeleteRoute(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Route UpdateRoute(Route route)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
