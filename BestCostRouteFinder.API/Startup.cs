@@ -26,6 +26,8 @@ namespace BestCostRouteFinder.API
         {
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>();
+
+            services.AddScoped<IRouteCalulatorService, RouteCalculatorService>();
             
             #region Repositories
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));

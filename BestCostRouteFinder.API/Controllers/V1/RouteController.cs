@@ -16,12 +16,16 @@ namespace BestCostRouteFinder.API.Controllers.V1
             _useCase = useCase;
         }
 
+        [HttpGet("lower-cost")]
+        public BestRouteOutput GetBestRoute([FromQuery] RouteRequestModel input)
+        {
+            return _useCase.GetBestRoute(input.Origin, input.Destiny);
+        }
+
         [HttpGet("")]
         public IEnumerable<Route> GetAvailableRoutes()
         {
-            IEnumerable<Route> availableRoutes = _useCase.GetAvailableRoutes();
-
-            return availableRoutes;
+            return _useCase.GetAvailableRoutes();
         }
     }
 }

@@ -5,6 +5,14 @@ namespace BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces
     public interface IRouteOperations
     {
         /// <summary>
+        /// Gets the best (cheaper) route given the origin and destiny provided
+        /// </summary>
+        /// <param name="origin">The origin point</param>
+        /// <param name="destiny">The destiny point</param>
+        /// <returns>The best route containing the list of destinations and the final cost</returns>
+        BestRouteOutput GetBestRoute(string origin, string destiny);
+
+        /// <summary>
         /// Gets the available routes
         /// </summary>
         /// <returns>The list of available routes</returns>

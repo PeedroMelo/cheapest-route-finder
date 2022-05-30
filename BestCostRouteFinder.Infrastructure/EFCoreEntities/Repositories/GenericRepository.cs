@@ -16,39 +16,25 @@ namespace BestCostRouteFinder.Infrastructure.Repositories
             _context = context;
         }
 
-        public void Add(T entity)
-        {
-            _context.Set<T>().Add(entity);
-        }
+        public T Add(T entity)
+            => _context.Set<T>().Add(entity).Entity;
 
         public void AddRange(IEnumerable<T> entities)
-        {
-            _context.Set<T>().AddRange(entities);
-        }
+            => _context.Set<T>().AddRange(entities);
 
         public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
-        {
-            return _context.Set<T>().Where(expression);
-        }
+            => _context.Set<T>().Where(expression);
 
         public IEnumerable<T> GetAll()
-        {
-            return _context.Set<T>().ToList();
-        }
+            => _context.Set<T>().ToList();
 
         public T GetById(int id)
-        {
-            return _context.Set<T>().Find(id);
-        }
+            => _context.Set<T>().Find(id);
 
         public void Remove(T entity)
-        {
-            _context.Set<T>().Remove(entity);
-        }
+            => _context.Set<T>().Remove(entity);
 
         public void RemoveRange(IEnumerable<T> entities)
-        {
-            _context.Set<T>().RemoveRange(entities);
-        }
+            => _context.Set<T>().RemoveRange(entities);
     }
 }

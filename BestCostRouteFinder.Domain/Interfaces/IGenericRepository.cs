@@ -30,7 +30,8 @@ namespace BestCostRouteFinder.Domain.Interfaces
         /// Adds a new entity
         /// </summary>
         /// <param name="entity">The entity to be added</param>
-        void Add(T entity);
+        /// <returns>The created entity</returns>
+        T Add(T entity);
 
         /// <summary>
         /// Adds a list of entities
