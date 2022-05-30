@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestCostRouteFinder.Infrast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestCostRouteFinder.Domain", "BestCostRouteFinder.Domain\BestCostRouteFinder.Domain.csproj", "{E0E5A94F-37AD-4B1E-8B22-7A71BF76BFCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestCostRouteFinder.Application", "BestCostRoutFinder.Application\BestCostRouteFinder.Application.csproj", "{7EA9260F-C3C7-40AE-9356-313836AF9702}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,18 @@ Global
 		{E0E5A94F-37AD-4B1E-8B22-7A71BF76BFCA}.Release|x64.Build.0 = Release|Any CPU
 		{E0E5A94F-37AD-4B1E-8B22-7A71BF76BFCA}.Release|x86.ActiveCfg = Release|Any CPU
 		{E0E5A94F-37AD-4B1E-8B22-7A71BF76BFCA}.Release|x86.Build.0 = Release|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Debug|x64.Build.0 = Debug|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Debug|x86.Build.0 = Debug|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Release|x64.ActiveCfg = Release|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Release|x64.Build.0 = Release|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Release|x86.ActiveCfg = Release|Any CPU
+		{7EA9260F-C3C7-40AE-9356-313836AF9702}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

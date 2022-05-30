@@ -1,4 +1,5 @@
-﻿using BestCostRouteFinder.Domain.Entities;
+﻿using BestCostRouteFinder.Domain.AggregateModels.Place;
+using BestCostRouteFinder.Domain.AggregateModels.Route;
 using Microsoft.EntityFrameworkCore;
 
 namespace BestCostRouteFinder.Infrastructure.Context

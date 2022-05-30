@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BestCostRouteFinder.Domain.Entities
+namespace BestCostRouteFinder.Domain.AggregateModels.Place
 {
     public class Place
     {

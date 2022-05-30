@@ -1,7 +1,8 @@
-using BestCostRouteFinder.Infrastructure.Context;
+using BestCostRouteFinder.Domain.AggregateModels.Route;
+using BestCostRouteFinder.Domain.Interfaces;
+using BestCostRouteFinder.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,6 +22,11 @@ namespace BestCostRouteFinder.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            #region Repositories
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<IRouteRepository, RouteRepository>();
+            #endregion
 
             services.AddSwaggerGen(c =>
             {
