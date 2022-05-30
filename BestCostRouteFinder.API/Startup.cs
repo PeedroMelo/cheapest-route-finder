@@ -1,5 +1,6 @@
 using BestCostRouteFinder.Domain.AggregateModels.Route;
 using BestCostRouteFinder.Domain.Interfaces;
+using BestCostRouteFinder.Infrastructure.Context;
 using BestCostRouteFinder.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,6 +23,7 @@ namespace BestCostRouteFinder.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<ApplicationDbContext>();
 
             #region Repositories
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
