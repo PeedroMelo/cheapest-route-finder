@@ -1,15 +1,12 @@
-﻿namespace BestCostRouteFinder.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BestCostRouteFinder.Domain.Entities
 {
     public class Place
     {
-        public int Id { get; }
+        [Key]
+        public int Id { get; set; }
 
-        public string Name { get; }
-
-        public Place(int id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
+        public string Name { get; set; }
     }
 }
