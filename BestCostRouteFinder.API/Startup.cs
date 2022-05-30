@@ -20,9 +20,7 @@ namespace BestCostRouteFinder.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
-            services.AddDbContext<ApplicationDbContext>();
 
             services.AddSwaggerGen(c =>
             {
