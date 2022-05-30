@@ -1,4 +1,6 @@
-using BestCostRouteFinder.Domain.AggregateModels.Route;
+using BestCostRouteFinder.Application.Services;
+using BestCostRouteFinder.Application.UseCases.V1;
+using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using BestCostRouteFinder.Domain.Interfaces;
 using BestCostRouteFinder.Infrastructure.Context;
 using BestCostRouteFinder.Infrastructure.Repositories;
@@ -24,10 +26,14 @@ namespace BestCostRouteFinder.API
         {
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>();
-
+            
             #region Repositories
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IRouteRepository, RouteRepository>();
+            #endregion
+
+            #region UseCases
+            services.AddTransient<IRouteOperations, RouteOperations>();
             #endregion
 
             services.AddSwaggerGen(c =>

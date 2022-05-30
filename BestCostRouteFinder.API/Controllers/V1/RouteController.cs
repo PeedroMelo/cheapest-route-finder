@@ -1,4 +1,5 @@
 ﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
+using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -8,17 +9,17 @@ namespace BestCostRouteFinder.API.Controllers.V1
     [Route("v1/routes")]
     public class RouteController : ControllerBase
     {
-        private readonly IRouteRepository _routeRepository;
+        private readonly IRouteOperations _useCase;
 
-        public RouteController(IRouteRepository routeRepository)
+        public RouteController(IRouteOperations useCase)
         {
-            _routeRepository = routeRepository;
+            _useCase = useCase;
         }
 
         [HttpGet("")]
         public IEnumerable<Route> GetAvailableRoutes()
         {
-            IEnumerable<Route> availableRoutes = _routeRepository.GetAll();
+            IEnumerable<Route> availableRoutes = _useCase.GetAvailableRoutes();
 
             return availableRoutes;
         }
