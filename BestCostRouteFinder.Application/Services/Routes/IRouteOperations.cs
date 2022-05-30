@@ -19,6 +19,13 @@ namespace BestCostRouteFinder.Application.Services.Routes
         Route CreateRoute(Route route);
 
         /// <summary>
+        /// Updates the route properties
+        /// </summary>
+        /// <param name="route">The route properties to be updated</param>
+        /// <returns>The route with its updated values</returns>
+        Route UpdateRoute(Route route);
+
+        /// <summary>
         /// Deletes a route by the provided id
         /// </summary>
         /// <param name="id">The route id to be deleted</param>

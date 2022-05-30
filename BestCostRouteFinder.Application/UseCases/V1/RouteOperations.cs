@@ -21,5 +21,10 @@ namespace BestCostRouteFinder.Application.UseCases.V1
         {
             throw new NotImplementedException();
         }
+
+        public Route UpdateRoute(Route route)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
