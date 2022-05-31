@@ -6,6 +6,7 @@ A Restfull API that finds the cheapest route cost between two places.
 - **Microsoft.EntityFrameworkCore (5.0.17)**: Entity Framework Core is a modern object-database mapper for .NET. It supports LINQ queries, change tracking, updates, and schema migrations.
 - **SQL Server 2019**: Microsoft® SQL Server® 2019 Express is a powerful and reliable free data management system.  
 - **XUnit**: xUnit.net is a free, open source, community-focused unit testing tool for the .NET Framework.
+- **Moq**: The most popular and friendly mocking library for .NET;
 - **Swagger**: Swagger is an open source set of rules, specifications and tools for developing and describing RESTful APIs.
 - **Docker Desktop**: Docker takes away repetitive, mundane configuration tasks and is used throughout the development lifecycle for fast, easy and portable application development – desktop and cloud.
 
