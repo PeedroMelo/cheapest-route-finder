@@ -39,20 +39,39 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
         [Fact]
         public void RouteOperationsCreateRoute_WithNewOriginAndDestiny_ShouldCreateANewRoute()
         {
+            Route newRoute = new(
+                origin: "TST",
+                destiny: "TSV",
+                cost: 10);
 
+            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
+
+            _mockRepository.Setup(r => r.Add(It.IsAny<Route>())).Returns(newRoute);
+
+            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
+
+            Route createdRoute = routeOperations.CreateRoute(newRoute);
+
+            Assert.Equal(newRoute.Origin, createdRoute.Origin);
+            Assert.Equal(newRoute.Destiny, createdRoute.Destiny);
+            Assert.Equal(newRoute.Cost, createdRoute.Cost);
         }
 
         [Fact]
         public void RouteOperationsCreateRoute_WithExistentOriginAndDestiny_ShouldThrowAnException()
         {
+            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
 
+            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
         }
 
         //// Delete
         [Fact]
         public void RouteOperationsDeleteRoute_WithValidConstructor_ShouldDeleteARoute()
         {
+            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
 
+            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
         }
 
 
@@ -60,19 +79,25 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
         [Fact]
         public void RouteOperationsUpdateRoute_WithNewOriginAndDestiny_ShouldUpdateANewRoute()
         {
+            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
 
+            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
         }
 
         [Fact]
         public void RouteOperationsUpdateRoute_WithSameOriginAndDestinyAndDifferentCost_ShouldUpdateTheCost()
         {
+            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
 
+            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
         }
 
         [Fact]
         public void RouteOperationsUpdateRoute_WithExistentOriginAndDestiny_ShouldThrowAnException()
         {
+            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
 
+            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
         }
 
         private static List<Route> GetStubData()
