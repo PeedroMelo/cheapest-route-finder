@@ -59,18 +59,18 @@ Now, navigate until the root directory of the project (On Windows, the default d
 
 * Create the migrations
 
-	`dotnet ef migrations --project .\BestCostRouteFinder.Infrastructure\BestCostRouteFinder.Infrastructure.csproj add InitialCreation`
+	`dotnet ef migrations --project .\CheapestRouteFinder.Infrastructure\CheapestRouteFinder.Infrastructure.csproj add InitialCreation`
 
 * Insert/update the migrations into the database
 
-	`dotnet ef database --project .\BestCostRouteFinder.Infrastructure\BestCostRouteFinder.Infrastructure.csproj update`
+	`dotnet ef database --project .\CheapestRouteFinder.Infrastructure\CheapestRouteFinder.Infrastructure.csproj update`
 
 
 ### 3. Executing the project
 With everything setted up, it is only necessary to execute the following command to run the application.
 Still in project root, execute the command:
 
-`dotnet run --project BestCostRouteFinder.API/BestCostRouteFinder.API.csproj`
+`dotnet run --project CheapestRouteFinder.API/CheapestRouteFinder.API.csproj`
 
 After that, you can open up you browser in one of the following URLs:
 - https://localhost:5001

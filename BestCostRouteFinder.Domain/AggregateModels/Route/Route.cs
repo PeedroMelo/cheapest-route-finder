@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BestCostRouteFinder.Domain.AggregateModels.Route
+namespace CheapestRouteFinder.Domain.AggregateModels.Route
 {
     public class Route
     {

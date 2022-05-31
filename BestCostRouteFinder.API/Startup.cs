@@ -1,10 +1,10 @@
-using BestCostRouteFinder.Application.Services;
-using BestCostRouteFinder.Application.UseCases.V1.RouteCostFinder;
-using BestCostRouteFinder.Application.UseCases.V1.RouteOperations;
-using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
-using BestCostRouteFinder.Domain.Interfaces;
-using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Context;
-using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories;
+using CheapestRouteFinder.Application.Services;
+using CheapestRouteFinder.Application.UseCases.V1.RouteCostFinder;
+using CheapestRouteFinder.Application.UseCases.V1.RouteOperations;
+using CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces;
+using CheapestRouteFinder.Domain.Interfaces;
+using CheapestRouteFinder.Infrastructure.EFCoreDataAccess.Context;
+using CheapestRouteFinder.Infrastructure.EFCoreDataAccess.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace BestCostRouteFinder.API
+namespace CheapestRouteFinder.API
 {
     public class Startup
     {
@@ -42,7 +42,7 @@ namespace BestCostRouteFinder.API
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BestCostRouteFinder.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CheapestRouteFinder.API", Version = "v1" });
             });
         }
 
@@ -52,7 +52,7 @@ namespace BestCostRouteFinder.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BestCostRouteFinder.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CheapestRouteFinder.API v1"));
             }
 
             //app.UseHttpsRedirection();

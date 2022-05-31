@@ -1,6 +1,6 @@
-﻿using BestCostRouteFinder.Domain.Interfaces;
+﻿using CheapestRouteFinder.Domain.Interfaces;
 
-namespace BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces
+namespace CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces
 {
     public interface IRouteRepository : IGenericRepository<Route>
     {

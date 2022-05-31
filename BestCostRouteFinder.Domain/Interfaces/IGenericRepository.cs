@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace BestCostRouteFinder.Domain.Interfaces
+namespace CheapestRouteFinder.Domain.Interfaces
 {
     public interface IGenericRepository<T> where T : class
     {

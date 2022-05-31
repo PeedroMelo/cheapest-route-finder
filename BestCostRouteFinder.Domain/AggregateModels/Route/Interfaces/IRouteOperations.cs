@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces
+namespace CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces
 {
     public interface IRouteOperations
     {

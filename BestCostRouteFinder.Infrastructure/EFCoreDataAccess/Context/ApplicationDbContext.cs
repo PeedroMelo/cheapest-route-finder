@@ -1,8 +1,8 @@
-﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
-using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Configurations;
+﻿using CheapestRouteFinder.Domain.AggregateModels.Route;
+using CheapestRouteFinder.Infrastructure.EFCoreDataAccess.Configurations;
 using Microsoft.EntityFrameworkCore;
 
-namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Context
+namespace CheapestRouteFinder.Infrastructure.EFCoreDataAccess.Context
 {
     public class ApplicationDbContext : DbContext
     {

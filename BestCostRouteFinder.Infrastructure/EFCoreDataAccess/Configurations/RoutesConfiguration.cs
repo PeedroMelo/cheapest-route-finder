@@ -1,8 +1,8 @@
-﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
+﻿using CheapestRouteFinder.Domain.AggregateModels.Route;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Configurations
+namespace CheapestRouteFinder.Infrastructure.EFCoreDataAccess.Configurations
 {
     public class RoutesConfiguration : IEntityTypeConfiguration<Route>
     {

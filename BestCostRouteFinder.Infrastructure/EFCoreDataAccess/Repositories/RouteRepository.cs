@@ -1,10 +1,10 @@
-﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
-using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
-using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Context;
+﻿using CheapestRouteFinder.Domain.AggregateModels.Route;
+using CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces;
+using CheapestRouteFinder.Infrastructure.EFCoreDataAccess.Context;
 using System;
 using System.Linq;
 
-namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
+namespace CheapestRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
 {
     public class RouteRepository : GenericRepository<Route>, IRouteRepository
     {

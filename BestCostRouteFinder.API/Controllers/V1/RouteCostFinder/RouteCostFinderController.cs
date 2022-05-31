@@ -1,13 +1,13 @@
-﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
-using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
+﻿using CheapestRouteFinder.Domain.AggregateModels.Route;
+using CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace BestCostRouteFinder.API.Controllers.V1.RouteCostFinder
+namespace CheapestRouteFinder.API.Controllers.V1.RouteCostFinder
 {
     [ApiController]
-    [Route("v1/cheapest-route-cost")]
+    [Route("v1/cheapest-route")]
     public class RouteCostFinderController : ControllerBase
     {
         private readonly IRouteCostFinder _useCase;

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace BestCostRouteFinder.API
+namespace CheapestRouteFinder.API
 {
     public class Program
     {

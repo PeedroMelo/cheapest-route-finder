@@ -1,9 +1,9 @@
-﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
-using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
+﻿using CheapestRouteFinder.Domain.AggregateModels.Route;
+using CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BestCostRouteFinder.Application.Services
+namespace CheapestRouteFinder.Application.Services
 {
     public class RouteCalculatorService : IRouteCalulatorService
     {

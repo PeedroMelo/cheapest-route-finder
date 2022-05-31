@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BestCostRouteFinder.API.Controllers.V1.RouteOperations.Requests
+namespace CheapestRouteFinder.API.Controllers.V1.RouteOperations.Requests
 {
     public class AddRouteRequest
     {

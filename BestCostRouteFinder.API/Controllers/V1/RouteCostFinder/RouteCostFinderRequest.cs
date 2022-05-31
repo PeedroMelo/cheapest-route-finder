@@ -1,4 +1,4 @@
-﻿namespace BestCostRouteFinder.API.Controllers.V1.RouteCostFinder
+﻿namespace CheapestRouteFinder.API.Controllers.V1.RouteCostFinder
 {
     public class RouteCostFinderRequest
     {

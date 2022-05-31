@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BestCostRouteFinder.Domain\BestCostRouteFinder.Domain.csproj" />
+    <ProjectReference Include="..\BestCostRouteFinder.Domain\CheapestRouteFinder.Domain.csproj" />
   </ItemGroup>
 
 </Project>

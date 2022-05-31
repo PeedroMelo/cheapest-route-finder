@@ -1,10 +1,10 @@
-﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
-using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
+﻿using CheapestRouteFinder.Domain.AggregateModels.Route;
+using CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BestCostRouteFinder.Application.UseCases.V1.RouteOperations
+namespace CheapestRouteFinder.Application.UseCases.V1.RouteOperations
 {
     public class RouteOperations : IRouteOperations
     {

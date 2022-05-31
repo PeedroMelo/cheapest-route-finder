@@ -1,12 +1,12 @@
-﻿using BestCostRouteFinder.API.Controllers.V1.RouteOperations.Requests;
-using BestCostRouteFinder.Domain.AggregateModels.Route;
-using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
+﻿using CheapestRouteFinder.API.Controllers.V1.RouteOperations.Requests;
+using CheapestRouteFinder.Domain.AggregateModels.Route;
+using CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 
-namespace BestCostRouteFinder.API.Controllers.V1.RouteOperations
+namespace CheapestRouteFinder.API.Controllers.V1.RouteOperations
 {
     [ApiController]
     [Route("v1/routes")]

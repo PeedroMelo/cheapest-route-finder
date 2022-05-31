@@ -1,7 +1,7 @@
-using BestCostRouteFinder.Domain.AggregateModels.Route;
+using CheapestRouteFinder.Domain.AggregateModels.Route;
 using Xunit;
 
-namespace BestCostRouteFinder.Domain.Test.AggregateModels
+namespace CheapestRouteFinder.Domain.Test.AggregateModels
 {
     public class RouteTest
     {

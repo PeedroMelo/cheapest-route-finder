@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "BestCostRouteFinder.API": {
+    "CheapestRouteFinder.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

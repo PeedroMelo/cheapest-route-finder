@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BestCostRouteFinder.Domain.AggregateModels.Route
+namespace CheapestRouteFinder.Domain.AggregateModels.Route
 {
     public class RouteCostFinderOutput
     {

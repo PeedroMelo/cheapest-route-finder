@@ -13,17 +13,17 @@ USER appuser
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["BestCostRouteFinder.API/BestCostRouteFinder.API.csproj", "BestCostRouteFinder.API/"]
-RUN dotnet restore "BestCostRouteFinder.API/BestCostRouteFinder.API.csproj"
+COPY ["CheapestRouteFinder.API/CheapestRouteFinder.API.csproj", "CheapestRouteFinder.API/"]
+RUN dotnet restore "CheapestRouteFinder.API/CheapestRouteFinder.API.csproj"
 COPY . .
-WORKDIR "/src/BestCostRouteFinder.API"
-RUN dotnet build "BestCostRouteFinder.API.csproj" -c Release -o /app/build
+WORKDIR "/src/CheapestRouteFinder.API"
+RUN dotnet build "CheapestRouteFinder.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "BestCostRouteFinder.API.csproj" -c Release -o /app/publish
+RUN dotnet publish "CheapestRouteFinder.API.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENV DOTNET_URLS=http://+:5000
-ENTRYPOINT ["dotnet", "BestCostRouteFinder.API.dll", "--server.urls", "http://+:5000"]
+ENTRYPOINT ["dotnet", "CheapestRouteFinder.API.dll", "--server.urls", "http://+:5000"]

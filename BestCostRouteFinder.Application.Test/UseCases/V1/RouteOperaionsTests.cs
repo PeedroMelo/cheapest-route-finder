@@ -1,13 +1,13 @@
-﻿using BestCostRouteFinder.Application.UseCases.V1.RouteOperations;
-using BestCostRouteFinder.Domain.AggregateModels.Route;
-using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
+﻿using CheapestRouteFinder.Application.UseCases.V1.RouteOperations;
+using CheapestRouteFinder.Domain.AggregateModels.Route;
+using CheapestRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace BestCostRouteFinder.Application.Test.UseCases.V1
+namespace CheapestRouteFinder.Application.Test.UseCases.V1
 {
     public class RouteOperaionsTests
     {
