@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces
 {
@@ -16,5 +17,11 @@ namespace BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces
         /// <param name="route">The new route to be created</param>
         /// <returns>The new created route</returns>
         Route CreateRoute(Route route);
+
+        /// <summary>
+        /// Deletes a route
+        /// </summary>
+        /// <param name="id">The id of the route to be deleted</param>
+        void DeleteRoute(int id);
     }
 }

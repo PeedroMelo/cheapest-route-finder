@@ -7,13 +7,6 @@ namespace BestCostRouteFinder.Domain.Interfaces
     public interface IGenericRepository<T> where T : class
     {
         /// <summary>
-        /// Gets a entity by its Id
-        /// </summary>
-        /// <param name="id">The entity Id</param>
-        /// <returns>The entity</returns>
-        T GetById(int id);
-
-        /// <summary>
         /// Gets all entities
         /// </summary>
         /// <returns>A list of entities</returns>

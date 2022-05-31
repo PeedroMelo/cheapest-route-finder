@@ -28,9 +28,6 @@ namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
         public IEnumerable<T> GetAll()
             => _context.Set<T>().ToList();
 
-        public T GetById(int id)
-            => _context.Set<T>().Find(id);
-
         public void Remove(T entity)
             => _context.Set<T>().Remove(entity);
 

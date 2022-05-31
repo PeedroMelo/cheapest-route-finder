@@ -2,6 +2,7 @@
 using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BestCostRouteFinder.Application.UseCases.V1.RouteOperations
 {
@@ -27,6 +28,23 @@ namespace BestCostRouteFinder.Application.UseCases.V1.RouteOperations
                 _routeRepository.SaveChanges();
 
                 return createdRoute;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void DeleteRoute(int id)
+        {
+            try
+            {
+                Route route = _routeRepository.GetById(id);
+                if (route != null)
+                {
+                    _routeRepository.Remove(route);
+                    _routeRepository.SaveChanges();
+                }
             }
             catch (Exception)
             {

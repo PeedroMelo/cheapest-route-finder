@@ -1,6 +1,8 @@
 ﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
 using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Context;
+using System;
+using System.Linq;
 
 namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
 {
@@ -25,9 +27,24 @@ namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
 
                 return createdRoute;
             }
-            catch (System.Exception)
+            catch (Exception)
             {
-                
+                throw;
+            }
+        }
+
+        public Route GetById(int id)
+        {
+            try
+            {
+                Route route = GetAll()
+                    .Where(r => r.Id == id)
+                    .FirstOrDefault();
+
+                return route;
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
