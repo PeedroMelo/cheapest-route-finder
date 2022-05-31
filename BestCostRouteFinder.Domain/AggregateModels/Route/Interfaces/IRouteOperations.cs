@@ -23,5 +23,13 @@ namespace BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces
         /// </summary>
         /// <param name="id">The id of the route to be deleted</param>
         void DeleteRoute(int id);
+
+        /// <summary>
+        /// Updates a route
+        /// </summary>
+        /// <param name="id">The id of the route to be updated</param>
+        /// <param name="route">The route to be updated with the new values</param>
+        /// <returns>The updated route</returns>
+        Route UpdateRoute(int id, Route route);
     }
 }

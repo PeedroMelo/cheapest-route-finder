@@ -12,27 +12,6 @@ namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
         {
         }
 
-        public Route CreateRoute(string origin, string destiny, decimal cost)
-        {
-            try
-            {
-                Route route = new(
-                    origin: origin,
-                    destiny: destiny,
-                    cost: cost
-                );
-
-                Route createdRoute = Add(route);
-                SaveChanges();
-
-                return createdRoute;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
         public Route GetById(int id)
         {
             try

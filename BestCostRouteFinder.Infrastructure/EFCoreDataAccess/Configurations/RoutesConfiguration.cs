@@ -16,10 +16,6 @@ namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Configurations
                 .Property(r => r.Id)
                 .ValueGeneratedOnAdd();
 
-            builder
-                .HasAlternateKey(r => new { r.Origin, r.Destiny })
-                .HasName("UQ_Route_OriginDestiny");
-
             SeedData(builder);
         }
 
