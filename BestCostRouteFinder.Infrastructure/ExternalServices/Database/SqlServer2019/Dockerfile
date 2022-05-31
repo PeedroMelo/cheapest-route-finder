@@ -14,7 +14,7 @@ RUN chmod +x /usr/src/app/initialize-db.sh
 
 # Set environment variables, not to have to write them with docker run command
 ENV SA_PASSWORD="123@Password"
-ENV MSSQL_PID="Express"
+ENV MSSQL_PID="sa"
 ENV ACCEPT_EULA="Y"
 
 # Expose port 1433 in case accesing from other container
