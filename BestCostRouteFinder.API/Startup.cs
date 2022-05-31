@@ -1,9 +1,10 @@
 using BestCostRouteFinder.Application.Services;
-using BestCostRouteFinder.Application.UseCases.V1;
+using BestCostRouteFinder.Application.UseCases.V1.RouteCostFinder;
+using BestCostRouteFinder.Application.UseCases.V1.RouteOperations;
 using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using BestCostRouteFinder.Domain.Interfaces;
-using BestCostRouteFinder.Infrastructure.Context;
-using BestCostRouteFinder.Infrastructure.Repositories;
+using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Context;
+using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -36,6 +37,7 @@ namespace BestCostRouteFinder.API
 
             #region UseCases
             services.AddTransient<IRouteOperations, RouteOperations>();
+            services.AddTransient<IRouteCostFinder, RouteCostFinder>();
             #endregion
 
             services.AddSwaggerGen(c =>

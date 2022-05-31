@@ -1,8 +1,8 @@
 ﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
 using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
-using BestCostRouteFinder.Infrastructure.Context;
+using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Context;
 
-namespace BestCostRouteFinder.Infrastructure.Repositories
+namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
 {
     public class RouteRepository : GenericRepository<Route>, IRouteRepository
     {

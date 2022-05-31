@@ -1,49 +1,21 @@
-﻿using BestCostRouteFinder.Domain.AggregateModels.Place;
-using BestCostRouteFinder.Domain.AggregateModels.Route;
+﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BestCostRouteFinder.Infrastructure.Context
+namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Configurations
 {
-    public class ApplicationDbContext : DbContext
+    public class RoutesConfiguration : IEntityTypeConfiguration<Route>
     {
-        public ApplicationDbContext() { }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        public void Configure(EntityTypeBuilder<Route> builder)
         {
-            options.UseSqlServer("Server=localhost,1433;User Id=sa;Password=123@Password;Database=RouteFinder");
+            builder.HasKey(r => new { r.Origin, r.Destiny });
+
+            SeedData(builder);
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        private static void SeedData(EntityTypeBuilder<Route> builder)
         {
-            modelBuilder.Entity<Place>().HasData(
-                new Place
-                {
-                    Id = 1,
-                    Name = "GRU"
-                },
-                new Place
-                {
-                    Id = 2,
-                    Name = "BRC"
-                },
-                new Place
-                {
-                    Id = 3,
-                    Name = "SCL"
-                },
-                new Place
-                {
-                    Id = 4,
-                    Name = "CDG"
-                },
-                new Place
-                {
-                    Id = 5,
-                    Name = "ORL"
-                }
-            );
-
-            modelBuilder.Entity<Route>().HasData(
+            builder.HasData(
                 new Route
                 {
                     Id = 1,
@@ -95,9 +67,5 @@ namespace BestCostRouteFinder.Infrastructure.Context
                 }
             );
         }
-
-        public DbSet<Place> Place { get; set; }
-
-        public DbSet<Route> Route { get; set; }
     }
 }

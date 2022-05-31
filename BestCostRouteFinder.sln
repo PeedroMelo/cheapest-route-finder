@@ -11,6 +11,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FDCB76B7-5231-46E1-B50B-A38411E00C49}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		BestCostRouteFinder.API\Dockerfile = BestCostRouteFinder.API\Dockerfile
+		INSTRUCTIONS.md = INSTRUCTIONS.md
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -18,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestCostRouteFinder.Infrast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestCostRouteFinder.Domain", "BestCostRouteFinder.Domain\BestCostRouteFinder.Domain.csproj", "{E0E5A94F-37AD-4B1E-8B22-7A71BF76BFCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestCostRouteFinder.Application", "BestCostRouteFinder.Application\BestCostRouteFinder.Application.csproj", "{721CEFDB-46BE-4C30-B68C-7AD4064CD0A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestCostRouteFinder.Application", "BestCostRouteFinder.Application\BestCostRouteFinder.Application.csproj", "{721CEFDB-46BE-4C30-B68C-7AD4064CD0A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

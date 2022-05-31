@@ -2,7 +2,7 @@
 
 namespace BestCostRouteFinder.Domain.AggregateModels.Route
 {
-    public class BestRouteOutput
+    public class RouteCostFinderOutput
     {
         /// <summary>
         /// The sequence of routes that composite the final route

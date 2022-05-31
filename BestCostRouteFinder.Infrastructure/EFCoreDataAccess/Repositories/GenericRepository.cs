@@ -1,11 +1,11 @@
 ﻿using BestCostRouteFinder.Domain.Interfaces;
-using BestCostRouteFinder.Infrastructure.Context;
+using BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace BestCostRouteFinder.Infrastructure.Repositories
+namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
