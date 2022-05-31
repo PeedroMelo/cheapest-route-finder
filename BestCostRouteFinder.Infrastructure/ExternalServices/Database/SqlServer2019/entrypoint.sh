@@ -1,1 +1,0 @@
-﻿/usr/src/app/initialize-db.sh & /opt/mssql/bin/sqlservr
