@@ -5,12 +5,32 @@ namespace BestCostRouteFinder.Domain.AggregateModels.Route
     public class Route
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; private set; }
 
-        public string Origin { get; set; }
+        [Required]
+        [MaxLength(3)]
+        public string Origin { get; private set; }
 
-        public string Destiny { get; set; }
+        [Required]
+        [MaxLength(3)]
+        public string Destiny { get; private set; }
 
-        public decimal Cost { get; set; }
+        [Required]
+        public decimal Cost { get; private set; }
+
+        public Route(int id, string origin, string destiny, decimal cost)
+        {
+            Id = id;
+            Origin = origin;
+            Destiny = destiny;
+            Cost = cost;
+        }
+
+        public Route(string origin, string destiny, decimal cost)
+        {
+            Origin = origin;
+            Destiny = destiny;
+            Cost = cost;
+        }
     }
 }

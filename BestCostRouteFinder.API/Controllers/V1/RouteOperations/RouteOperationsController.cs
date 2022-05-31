@@ -1,4 +1,5 @@
-﻿using BestCostRouteFinder.Domain.AggregateModels.Route;
+﻿using BestCostRouteFinder.API.Controllers.V1.RouteOperations.AddRoute;
+using BestCostRouteFinder.Domain.AggregateModels.Route;
 using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,9 +20,22 @@ namespace BestCostRouteFinder.API.Controllers.V1.RouteOperations
 
         [HttpGet("")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Route>))]
-        public IEnumerable<Route> GetAvailableRoutes()
+        public IActionResult GetAvailableRoutes()
         {
-            return _useCase.GetAvailableRoutes();
+            return Ok(_useCase.GetAvailableRoutes());
+        }
+
+        [HttpPost("")]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(Route))]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ValidationProblemDetails))]
+        public IActionResult CreateRoute([FromBody] AddRouteRequest request)
+        {
+            Route route = new(
+                    origin: request.Origin,
+                    destiny: request.Destiny,
+                    cost: request.Cost);
+
+            return Created("", _useCase.CreateRoute(route));
         }
     }
 }

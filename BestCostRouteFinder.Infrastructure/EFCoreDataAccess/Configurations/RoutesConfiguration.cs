@@ -8,7 +8,17 @@ namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Configurations
     {
         public void Configure(EntityTypeBuilder<Route> builder)
         {
-            builder.HasKey(r => new { r.Origin, r.Destiny });
+            builder
+                .HasKey(r => r.Id)
+                .HasName("PK_Route_Id");
+
+            builder
+                .Property(r => r.Id)
+                .ValueGeneratedOnAdd();
+
+            builder
+                .HasAlternateKey(r => new { r.Origin, r.Destiny })
+                .HasName("UQ_Route_OriginDestiny");
 
             SeedData(builder);
         }
@@ -17,54 +27,54 @@ namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Configurations
         {
             builder.HasData(
                 new Route
-                {
-                    Id = 1,
-                    Origin = "GRU",
-                    Destiny = "BRC",
-                    Cost = 10
-                },
+                (
+                    id: 1,
+                    origin: "GRU",
+                    destiny: "BRC",
+                    cost: 10
+                ),
                 new Route
-                {
-                    Id = 2,
-                    Origin = "BRC",
-                    Destiny = "SCL",
-                    Cost = 5
-                },
+                (
+                    id: 2,
+                    origin: "BRC",
+                    destiny: "SCL",
+                    cost: 5
+                ),
                 new Route
-                {
-                    Id = 3,
-                    Origin = "GRU",
-                    Destiny = "CDG",
-                    Cost = 75
-                },
+                (
+                    id: 3,
+                    origin: "GRU",
+                    destiny: "CDG",
+                    cost: 75
+                ),
                 new Route
-                {
-                    Id = 4,
-                    Origin = "GRU",
-                    Destiny = "SCL",
-                    Cost = 20
-                },
+                (
+                    id: 4,
+                    origin: "GRU",
+                    destiny: "SCL",
+                    cost: 20
+                ),
                 new Route
-                {
-                    Id = 5,
-                    Origin = "GRU",
-                    Destiny = "ORL",
-                    Cost = 56
-                },
+                (
+                    id: 5,
+                    origin: "GRU",
+                    destiny: "ORL",
+                    cost: 56
+                ),
                 new Route
-                {
-                    Id = 6,
-                    Origin = "ORL",
-                    Destiny = "CDG",
-                    Cost = 5
-                },
+                (
+                    id: 6,
+                    origin: "ORL",
+                    destiny: "CDG",
+                    cost: 5
+                ),
                 new Route
-                {
-                    Id = 7,
-                    Origin = "SCL",
-                    Destiny = "ORL",
-                    Cost = 20
-                }
+                (
+                    id: 7,
+                    origin: "SCL",
+                    destiny: "ORL",
+                    cost: 20
+                )
             );
         }
     }

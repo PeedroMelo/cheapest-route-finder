@@ -19,9 +19,19 @@ namespace BestCostRouteFinder.Application.UseCases.V1.RouteOperations
             return _routeRepository.GetAll();
         }
 
-        public Route CreateRoute(Route route)
+        public Route CreateRoute(Route input)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Route createdRoute = _routeRepository.Add(input);
+                _routeRepository.SaveChanges();
+
+                return createdRoute;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

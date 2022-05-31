@@ -23,8 +23,4 @@
     <ProjectReference Include="..\BestCostRouteFinder.Infrastructure\BestCostRouteFinder.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\V1\RouteOperations\AddRoute\" />
-  </ItemGroup>
-
 </Project>

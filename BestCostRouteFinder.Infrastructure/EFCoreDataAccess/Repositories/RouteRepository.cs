@@ -14,12 +14,11 @@ namespace BestCostRouteFinder.Infrastructure.EFCoreDataAccess.Repositories
         {
             try
             {
-                Route route = new()
-                {
-                    Origin = origin,
-                    Destiny = destiny,
-                    Cost = cost
-                };
+                Route route = new(
+                    origin: origin,
+                    destiny: destiny,
+                    cost: cost
+                );
 
                 Route createdRoute = Add(route);
                 SaveChanges();
