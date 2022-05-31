@@ -82,16 +82,6 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
             Assert.Equal($"The route {newRoute.Origin}-{newRoute.Destiny} already exists.", ex.Message);
         }
 
-        //// Delete
-        [Fact]
-        public void RouteOperationsDeleteRoute_WithValidConstructor_ShouldDeleteARoute()
-        {
-            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
-
-            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
-        }
-
-
         /// Update
         [Fact]
         public void RouteOperationsUpdateRoute_WithNewOriginAndDestiny_ShouldUpdateANewRoute()
