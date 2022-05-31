@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CB4B8F31
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestCostRouteFinder.Domain.Test", "BestCostRouteFinder.Domain.Test\BestCostRouteFinder.Domain.Test.csproj", "{7C54AA2A-B7FD-4EF2-B143-6B6AE1178F6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestCostRouteFinder.Application.Test", "BestCostRouteFinder.Application.Test\BestCostRouteFinder.Application.Test.csproj", "{C62372DB-1E52-46DD-AA54-7342C3CC6397}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,12 +98,25 @@ Global
 		{7C54AA2A-B7FD-4EF2-B143-6B6AE1178F6D}.Release|x64.Build.0 = Release|Any CPU
 		{7C54AA2A-B7FD-4EF2-B143-6B6AE1178F6D}.Release|x86.ActiveCfg = Release|Any CPU
 		{7C54AA2A-B7FD-4EF2-B143-6B6AE1178F6D}.Release|x86.Build.0 = Release|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Debug|x64.Build.0 = Debug|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Debug|x86.Build.0 = Debug|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Release|x64.ActiveCfg = Release|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Release|x64.Build.0 = Release|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Release|x86.ActiveCfg = Release|Any CPU
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7C54AA2A-B7FD-4EF2-B143-6B6AE1178F6D} = {CB4B8F31-73A1-4873-B572-B5E7FBC71BA6}
+		{C62372DB-1E52-46DD-AA54-7342C3CC6397} = {CB4B8F31-73A1-4873-B572-B5E7FBC71BA6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FDA8BD0-62D2-4FDB-BBD3-80A144EE5D74}
