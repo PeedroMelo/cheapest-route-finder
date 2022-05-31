@@ -2,6 +2,7 @@
 using BestCostRouteFinder.Domain.AggregateModels.Route;
 using BestCostRouteFinder.Domain.AggregateModels.Route.Interfaces;
 using Moq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
@@ -60,9 +61,19 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
         [Fact]
         public void RouteOperationsCreateRoute_WithExistentOriginAndDestiny_ShouldThrowAnException()
         {
+            Route newRoute = new(
+                origin: "GRU",
+                destiny: "BRC",
+                cost: 10);
+
             _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
 
+            _mockRepository.Setup(r => r.Add(It.IsAny<Route>())).Returns(newRoute);
+
             IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
+
+            var ex = Assert.Throws<ArgumentException>(() => routeOperations.CreateRoute(newRoute));
+            Assert.Equal($"The route {newRoute.Origin}-{newRoute.Destiny} already exists.", ex.Message);
         }
 
         //// Delete
