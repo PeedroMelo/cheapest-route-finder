@@ -42,9 +42,7 @@ namespace BestCostRouteFinder.Application.UseCases.V1.RouteCostFinder
             foreach (List<Route> entry in calculatedRoutes)
             {
                 if (entry.Count == 0)
-                {
                     continue;
-                }
 
                 // Get by default the value of the first element
                 if (entry == calculatedRoutes.First())
