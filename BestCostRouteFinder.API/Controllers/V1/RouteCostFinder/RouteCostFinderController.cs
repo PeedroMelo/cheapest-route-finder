@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace BestCostRouteFinder.API.Controllers.V1.RouteCostFinder
 {
     [ApiController]
-    [Route("v1/route-cost-finder")]
+    [Route("v1/cheapest-route-cost")]
     public class RouteCostFinderController : ControllerBase
     {
         private readonly IRouteCostFinder _useCase;
