@@ -77,7 +77,6 @@ namespace BestCostRouteFinder.API.Controllers.V1.RouteOperations
                     request.Destiny,
                     request.Cost);
 
-
                 return Ok(_useCase.UpdateRoute(id, route));
             }
             catch (Exception)
