@@ -18,9 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BestCostRouteFinder.Application\CheapestRouteFinder.Application.csproj" />
-    <ProjectReference Include="..\BestCostRouteFinder.Domain\CheapestRouteFinder.Domain.csproj" />
-    <ProjectReference Include="..\BestCostRouteFinder.Infrastructure\CheapestRouteFinder.Infrastructure.csproj" />
+    <ProjectReference Include="..\CheapestRouteFinder.Application\CheapestRouteFinder.Application.csproj" />
+    <ProjectReference Include="..\CheapestRouteFinder.Domain\CheapestRouteFinder.Domain.csproj" />
+    <ProjectReference Include="..\CheapestRouteFinder.Infrastructure\CheapestRouteFinder.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
