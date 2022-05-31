@@ -61,6 +61,12 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
         [Fact]
         public void RouteOperationsCreateRoute_WithExistentOriginAndDestiny_ShouldThrowAnException()
         {
+            Route oldRoute = new(
+                id: 1,
+                origin: "GRU",
+                destiny: "BRC",
+                cost: 10);
+
             Route newRoute = new(
                 origin: "GRU",
                 destiny: "BRC",
@@ -68,7 +74,7 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
 
             _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
 
-            _mockRepository.Setup(r => r.Add(It.IsAny<Route>())).Returns(newRoute);
+            _mockRepository.Setup(r => r.Add(It.IsAny<Route>())).Returns(oldRoute);
 
             IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
 
@@ -91,14 +97,40 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
         public void RouteOperationsUpdateRoute_WithNewOriginAndDestiny_ShouldUpdateANewRoute()
         {
             Route oldRoute = new(
-                id: 1,
-                origin: "GRU",
-                destiny: "BRC",
-                cost: 10);
+                id: 6,
+                origin: "ORL",
+                destiny: "CDG",
+                cost: 5);
 
             Route newRoute = new(
-                origin: "GRU",
+                origin: "ORL",
                 destiny: "BRC",
+                cost: 15);
+
+            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
+
+            _mockRepository.Setup(r => r.GetById(It.IsAny<int>())).Returns(oldRoute);
+
+            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
+
+            Route createdRoute = routeOperations.UpdateRoute(oldRoute.Id, newRoute);
+
+            Assert.Equal("BRC", newRoute.Destiny);
+            Assert.Equal(15, newRoute.Cost);
+        }
+
+        [Fact]
+        public void RouteOperationsUpdateRoute_WithSameOriginAndDestinyAndDifferentCost_ShouldUpdateTheCost()
+        {
+            Route oldRoute = new(
+                id: 6,
+                origin: "ORL",
+                destiny: "CDG",
+                cost: 5);
+
+            Route newRoute = new(
+                origin: "ORL",
+                destiny: "CDG",
                 cost: 15);
 
             _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
@@ -112,22 +144,6 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
             Assert.Equal(oldRoute.Origin, newRoute.Origin);
             Assert.Equal(oldRoute.Destiny, newRoute.Destiny);
             Assert.Equal(15, newRoute.Cost);
-        }
-
-        [Fact]
-        public void RouteOperationsUpdateRoute_WithSameOriginAndDestinyAndDifferentCost_ShouldUpdateTheCost()
-        {
-            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
-
-            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
-        }
-
-        [Fact]
-        public void RouteOperationsUpdateRoute_WithExistentOriginAndDestiny_ShouldThrowAnException()
-        {
-            _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
-
-            IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
         }
 
         private static List<Route> GetStubData()
