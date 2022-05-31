@@ -90,9 +90,28 @@ namespace BestCostRouteFinder.Application.Test.UseCases.V1
         [Fact]
         public void RouteOperationsUpdateRoute_WithNewOriginAndDestiny_ShouldUpdateANewRoute()
         {
+            Route oldRoute = new(
+                id: 1,
+                origin: "GRU",
+                destiny: "BRC",
+                cost: 10);
+
+            Route newRoute = new(
+                origin: "GRU",
+                destiny: "BRC",
+                cost: 15);
+
             _mockRepository.Setup(r => r.GetAll()).Returns(_stubData);
 
+            _mockRepository.Setup(r => r.GetById(It.IsAny<int>())).Returns(oldRoute);
+
             IRouteOperations routeOperations = new RouteOperations(_mockRepository.Object);
+
+            Route createdRoute = routeOperations.UpdateRoute(oldRoute.Id, newRoute);
+
+            Assert.Equal(oldRoute.Origin, newRoute.Origin);
+            Assert.Equal(oldRoute.Destiny, newRoute.Destiny);
+            Assert.Equal(15, newRoute.Cost);
         }
 
         [Fact]
