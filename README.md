@@ -80,7 +80,7 @@ If you see the Swagger home page, it means that everything worked out and you ar
 ![image](https://user-images.githubusercontent.com/19916327/171126534-95c4bf41-9f55-4f3c-82c5-e61a2ba21cfb.png)
 
 ## ℹ Information
-This project was builted by Pedro Vieira ([@vieirapcm](https://github.com/vieirapcm/)), for the application to the role of .NET Developer at [BancoMaster](https://www.bancomaster.com.br/).
+This project was builted by Pedro Vieira ([@vieirapcm](https://github.com/vieirapcm/)).
 
 **My contacts**
 - E-mail: vieirapcm@gmail.com / pe-melo97@outlook.com
